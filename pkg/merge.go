@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package pkg
 
 func Merge(arr []int, begin, mid, end int) {
 	left := mid - begin + 1
@@ -34,27 +32,5 @@ func Merge(arr []int, begin, mid, end int) {
 		j++
 		index++
 	}
-
-}
-
-func MergeSort(arr []int, begin, end int) {
-
-	if begin >= end {
-		return
-	}
-	mid := begin + (end-begin)/2
-	MergeSort(arr, begin, mid)
-	MergeSort(arr, mid+1, end)
-	Merge(arr, begin, mid, end)
-
-}
-
-func main() {
-	fmt.Println("Using Merge Sort : ")
-	arr1 := []int{4, 3, 6, 0, -2, 8, 10}
-	fmt.Println(arr1)
-	fmt.Println("Initial Array : ", arr1)
-	MergeSort(arr1, 0, len(arr1)-1)
-	fmt.Println("After Sorting : ", arr1)
 
 }

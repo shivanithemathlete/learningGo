@@ -6,12 +6,9 @@ import (
 	a "github.com/shivanithemathlete/learningGo/pkg"
 )
 
-func Square(x int) int {
-	return x * x
-}
 func main() {
-	fmt.Println("Calling Reduce from package pkg")
+	fmt.Println("Calling Reduce from package pkg: Squared Values")
 	inputSlice := []int{2, 4, 3, 9, 0, 1, 4}
-	fmt.Println(a.Reduce(inputSlice, Square))
+	fmt.Println(a.Reduce(inputSlice, a.Square))
 
 }

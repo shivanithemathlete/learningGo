@@ -9,5 +9,5 @@ func main() {
 	b = a[:3]
 	fmt.Println(b)
 	b[0] = 6
-	fmt.Println(a, b)
+	fmt.Println(a, b, a[3])
 }
